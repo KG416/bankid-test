@@ -1,0 +1,12 @@
+{
+  "name": "bankid-https",
+  "version": "1.0.0",
+  "description": "requests to bankid api",
+  "main": "index.js",
+  "author": "kg",
+  "license": "ISC",
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "axios": "^0.18.1"
+  }
+}

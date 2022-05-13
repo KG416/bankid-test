@@ -2,18 +2,18 @@
   "name": "bankid-karl",
   "version": "1.0.0",
   "description": "A BankID test app",
-  "main": "index.js",
+  "main": "httpServer.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon httpServer.js"
   },
   "author": "kg",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "open": "^8.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
