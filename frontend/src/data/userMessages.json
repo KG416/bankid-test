@@ -1,0 +1,129 @@
+[
+  { "updatedYYMMDD": 220429 },
+  {
+    "Code": "RFA1",
+    "se": "Starta BankID-appen",
+    "en": "Start your BankID app.",
+    "Event, status, hintCode or errorCode": "tatus=pending hintCode= outstandingTran saction hintCode=noClient"
+  },
+  {
+    "Code": "RFA2",
+    "se": "Du har inte BankID-appen installerad. Kontakta din internetbank.",
+    "en": "The BankID app is not installed. Please contact your internet bank.",
+    "Event, status, hintCode or errorCode": "The BankID app is not installed in the mobile device."
+  },
+  {
+    "Code": "RFA3",
+    "se": "Åtgärden avbruten. Försök igen.",
+    "en": "Action cancelled. Please try again.",
+    "Event, status, hintCode or errorCode": "errorCode=cancelled"
+  },
+  {
+    "Code": "RFA4",
+    "se": "En identifiering eller underskrift får det här personnumret är redan påbörjad. Försök igen.",
+    "en": "An identification or signing for this personal number is already started. Please try again.",
+    "Event, status, hintCode or errorCode": "errorCode=alreadyInProgress"
+  },
+  {
+    "Code": "RFA5",
+    "se": "Internt tekniskt fel. Försök igen.",
+    "en": "Internal error. Please try again.",
+    "Event, status, hintCode or errorCode": "errorCode=requestTimeout errorCode=maintenance (repeatedly) errorCode=internalError"
+  },
+  {
+    "Code": "RFA6",
+    "se": "Åtgärden avbruten.",
+    "en": "Action cancelled.",
+    "Event, status, hintCode or errorCode": "status=failed hintCode=userCancel"
+  },
+  {
+    "Code": "RFA8",
+    "se": "BankID-appen svarar inte. Kontrollera att den är startad och att du har internetanslutning. Om du inte har något giltigt BankID kan du hämta ett hos din Bank. Försök sedan igen.",
+    "en": "The BankID app is not responding. Please check that the program is started and that you have internet access. If you donät have a valid BankID you can get one from your bank. Try again.",
+    "Event, status, hintCode or errorCode": "status=failed hintCode=expiredTransaction"
+  },
+  {
+    "Code": "RFA9",
+    "se": "Skriv in din säkerhetskod i BankID- appen och välj Identifiera eller Skriv under.",
+    "en": "Enter your security code in the BankID app and select Identify or Sign.",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=userSign"
+  },
+  {
+    "Code": "RFA13",
+    "se": "Försöker starta BankID-appen.",
+    "en": "Trying to start your BankID app.",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=outstandingTransaction"
+  },
+  {
+    "Code": "RFA14A",
+    "se": "Söker efter BankID, det kan ta en liten stund... Om det har gått några sekunder och inget BankID har hittats har du sannolikt inget BankID som går att använda får den aktuella identifieringen/underskriften i den här datorn. Om du har ett BankID- kort, sätt in det i kortläsaren. Om du inte har något BankID kan du hämta ett hos din internetbank. Om du har ett BankID på en annan enhet kan du starta din BankID-app där.",
+    "en": "Searching for BankID:s, it may take a little while... If a few seconds have passed and still no BankID has been found, you probably donät have a BankID which can be used for this identification/signing on this computer. If you have a BankID card, please insert it into your card reader. If you donät have a BankID you can order one from your internet bank. If you have a BankID on another device you can start the BankID app on that device.",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=started The RP provided the personal number in the web service call (without using tokenStartRequired). The user accesses the service using a personal computer."
+  },
+  {
+    "Code": "RFA14B",
+    "se": "Söker efter BankID, det kan ta en liten stund... Om det har gått några sekunder och inget BankID har hittats har du sannolikt inget BankID som går att använda får den aktuella identifieringen/underskriften i den här enheten. Om du inte har något BankID kan du hämta ett hos din internetbank. Om du har ett BankID på en annan enhet kan du starta din BankID-app där.",
+    "en": "Searching for BankID:s, it may take a little while... If a few seconds have passed and still no BankID has been found, you probably donät have a BankID which can be used for this identification/signing on this device. If you donät have a BankID you can order one from your internet bank. If you have a BankID on another device you can start the BankID app on that device.",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=started The RP provided the personal number in the web service call (without using tokenStartRequired). The user accesses the service using a mobile device."
+  },
+  {
+    "Code": "RFA15A",
+    "se": "Söker efter BankID, det kan ta en liten stund... Om det har gått några sekunder och inget BankID har hittats har du sannolikt inget BankID som går att använda får den aktuella identifieringen/underskriften i den här datorn. Om du har ett BankID- kort, sätt in det i kortläsaren. Om du inte har något BankID kan du hämta ett hos din internetbank.",
+    "en": "Searching for BankID:s, it may take a little while... If a few seconds have passed and still no BankID has been found, you probably donät have a BankID which can be used for this identification/signing on this computer. If you have a BankID card, please insert it into your card reader. If you donät have a BankID you can order one from your internet bank.",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=started The RP did not provide the personal number in the web service call. The user accesses the service using a personal computer."
+  },
+  {
+    "Code": "RFA15B",
+    "se": "Söker efter BankID, det kan ta en liten stund... Om det har gått några sekunder och inget BankID har hittats har du sannolikt inget BankID som går att använda får den aktuella identifieringen/underskriften i den här enheten. Om du inte har något BankID kan du hämta ett hos din internetbank.",
+    "en": "Searching for BankID:s, it may take a little while... If a few seconds have passed and still no BankID has been found, you probably donät have a BankID which can be used for this identification/signing on this device. If you donät have a BankID you can order one from your internet bank",
+    "Event, status, hintCode or errorCode": "status=pending hintCode=started The RP did not provide the personal number in the web service call. The user accesses the service using a mobile device."
+  },
+  {
+    "Code": "RFA16",
+    "se": "Det BankID du försäker använda är får gammalt eller spårrat. Använd ett annat BankID eller hämta ett nytt hos din internetbank.",
+    "en": "The BankID you are trying to use is revoked or too old. Please use another BankID or order a new one from your internet bank.",
+    "Event, status, hintCode or errorCode": "status=failed hintCode=certificateErr"
+  },
+  {
+    "Code": "RFA17A",
+    "se": "BankID-appen verkar inte finnas i din dator eller telefon. Installera den och hämta ett BankID hos din internetbank. Installera appen från din appbutik eller https://install.bankid.com.",
+    "en": "The BankID app couldnät be found on your computer or mobile device. Please install it and order a BankID from your internet bank. Install the app from your app store or https://install.bankid.com.",
+    "Event, status, hintCode or errorCode": "status=failed hintCode=startFailed RP does not use QR code"
+  },
+  {
+    "Code": "RFA17B",
+    "se": "Misslyckades att läsa av QR koden. Starta BankID-appen och läs av QR koden. Kontrollera att BankID-appen är uppdaterad. Om du inte har BankID-appen mäste du installera den och hämta ett BankID hos din internetbank. Installera appen från din appbutik eller https://install.bankid.com.",
+    "en": "Failed to scan the QR code. Start the BankID app and scan the QR code. Check that the BankID app is up to date. If you don't have the BankID app, you need to install it and order a BankID from your internet bank. Install the app from your app store or https://install.bankid.com.",
+    "Event, status, hintCode or errorCode": "status=failed hintCode=startFailed RP uses QR code"
+  },
+  {
+    "Code": "RFA18",
+    "se": "Starta BankID-appen",
+    "en": "Start the BankID app",
+    "Event, status, hintCode or errorCode": "he name of link or button used to start the BankID App"
+  },
+  {
+    "Code": "RFA19",
+    "se": "Vill du identifiera dig eller skriva under med BankID på den här datorn eller med ett Mobilt BankID?",
+    "en": "Would you like to identify yourself or sign with a BankID on this computer or with a Mobile BankID?",
+    "Event, status, hintCode or errorCode": "The user accesses the service using a browser on a personal computer."
+  },
+  {
+    "Code": "RFA20",
+    "se": "Vill du identifiera dig eller skriva under med ett BankID på den här enheten eller med ett BankID på en annan enhet?",
+    "en": "Would you like to identify yourself or sign with a BankID on this device or with a BankID on another device?",
+    "Event, status, hintCode or errorCode": "The user accesses the service using a browser on a mobile device."
+  },
+  {
+    "Code": "RFA21",
+    "se": "Identifiering eller underskrift pågår.",
+    "en": "Identification or signing in progress.",
+    "Event, status, hintCode or errorCode": "status=pending The hintCode is unknown to RP."
+  },
+  {
+    "Code": "RFA22",
+    "se": "Okänt fel. Försök igen.",
+    "en": "Unknown error. Please try again.",
+    "Event, status, hintCode or errorCode": "status=failed The hintCode is unknown to RP. An error occurred. The errorCode is unknown to RP."
+  }
+]

@@ -1,0 +1,19 @@
+@import '../../global.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: rgb(245, 245, 245);
+  padding: 1rem 2rem 4.5rem;
+  border-radius: $borderRadiusSmall;
+  filter: drop-shadow(0 3px 3px lightgray);
+
+  @media (max-width: $mediumScreen) {
+    background-color: unset;
+    filter: unset;
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../global.scss';
+
+.buttonOrLink {
+  border-radius: $borderRadiusSmall;
+
+  height: 65px;
+  padding: 0;
+  margin: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  outline: none;
+
+  &.primary {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background-color: $darkGray;
+    }
+  }
+
+  &.secondary {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  &.primary:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+
+  &.secondary:disabled {
+    color: white;
+    border: none;
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+}
+
+.buttonOrLinkIcon {
+  height: 60px;
+  width: 60px;
+  align-self: flex-start;
+
+  svg:hover {
+    fill: $darkGray;
+  }
+}
+
+.btnSvgWrapper {
+  height: 100%;
+}

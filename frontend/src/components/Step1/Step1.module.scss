@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+}

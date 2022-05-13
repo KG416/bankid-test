@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  p.userMessage {
+    text-align: center;
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .link {
+      margin: 1rem 0;
+      background-color: transparent;
+      border: none;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

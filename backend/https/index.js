@@ -1,6 +1,5 @@
 const axiosLib = require('axios')
 const fs = require('fs')
-const path = require('path')
 const https = require('https')
 const to = require('await-to-js').to
 
@@ -15,8 +14,8 @@ const configs = {
     test: {
         mobileBankIdPolicy: '1.2.3.4.25',
         bankdIdUrl: 'https://appapi2.test.bankid.com/rp/v5.1',
-        pfx: fs.readFileSync(path.join(__dirname, './cert/FPTestcert3_20200618.p12'), 'utf8'),
-        ca: fs.readFileSync(path.join(__dirname, './cert/test.ca'), 'utf8'),
+        pfx: fs.readFileSync('./cert/FPTestcert3_20200618.p12'),
+        ca: fs.readFileSync('./cert/test.ca'),
         passphrase: 'qwerty123',
     }
 }
@@ -35,9 +34,23 @@ const axios = axiosLib.create({
 })
 
 async function call(method, params) {
+    console.log('call', 'method:', method, 'params:', params)
     const [error, response] = await to(axios.post(`${config.bankdIdUrl}/${method}`, params))
     
-    if (error) return { error }
+    // if (error) return { error }
+
+    if (error) {
+        console.error('Error in call', error)
+        if (error?.response && error?.response?.data) {
+            if (method === 'collect') return console.log('collect canceled from RP frontend (client app, not BankID app)')
+            if (error.response.data.errorCode === 'alreadyInProgress') {
+                console.error('You would have had to call cancel on this orderRef before retrying')
+                console.error('The order should now have been automatically cancelled by this premature retry')
+            }
+        }
+        return { error }
+    }
+
     return response.data
 }
 
