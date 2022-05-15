@@ -34,23 +34,11 @@ const axios = axiosLib.create({
 })
 
 async function call(method, params) {
-    console.log('call', 'method:', method, 'params:', params)
+    console.log('https call', 'method:', method, 'params:', params)
+
     const [error, response] = await to(axios.post(`${config.bankdIdUrl}/${method}`, params))
     
-    // if (error) return { error }
-
-    if (error) {
-        console.error('Error in call', error)
-        if (error?.response && error?.response?.data) {
-            if (method === 'collect') return console.log('collect canceled from RP frontend (client app, not BankID app)')
-            if (error.response.data.errorCode === 'alreadyInProgress') {
-                console.error('You would have had to call cancel on this orderRef before retrying')
-                console.error('The order should now have been automatically cancelled by this premature retry')
-            }
-        }
-        return { error }
-    }
-
+    if (error) return { error }
     return response.data
 }
 
