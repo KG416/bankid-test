@@ -4,7 +4,7 @@
     "Code": "RFA1",
     "se": "Starta BankID-appen",
     "en": "Start your BankID app.",
-    "Event, status, hintCode or errorCode": "tatus=pending hintCode= outstandingTran saction hintCode=noClient"
+    "Event, status, hintCode or errorCode": "status=pending hintCode= outstandingTran saction hintCode=noClient"
   },
   {
     "Code": "RFA2",
