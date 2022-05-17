@@ -43,7 +43,7 @@ const collectController = async (req, res) => {
             return res.json({ status: response.status })
         }
 
-        // if order is still pending or cancelled
+        // if order is still pending
         res.json(response)
     } catch (err) {
         res.status(500).json({ message: err.message + '(collectController)' })
