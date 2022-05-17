@@ -1,6 +1,7 @@
 const bankIdFetch = async (method, params) => {
     try {
         console.log('bankidFetch', 'params:', params, 'method:', method)
+        
         const res = await fetch(`/api/bankid/${method}`, {
             method: 'POST',
             headers: {
@@ -9,10 +10,7 @@ const bankIdFetch = async (method, params) => {
             body: JSON.stringify(params),
         })
 
-        if (!res.ok) {
-            console.log('bankIdFetch:', res?.status, res?.statusText)
-            return
-        }
+        if (!res.ok) return
 
         const data = await res.json()
         return data

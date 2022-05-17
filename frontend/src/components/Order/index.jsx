@@ -13,7 +13,7 @@ import ChevronLeft from '../../components/icons/ChevronLeft'
 
 // utils
 import { launchNativeApp } from '../../utils/launchNativeApp'
-import useUserIp from '../../utils/hooks/useUserIp'
+import getUserIp from '../../utils/getUserIp'
 import bankIdFetch from '../../utils/bankIdFetch'
 import bankIdCollect from '../../utils/bankIdCollect'
 import isMobile from '../../utils/isMobile'
@@ -29,14 +29,14 @@ function Order ({
   const [step, setStep] = useState(1)
   const [userMessage, setUserMessage] = useState('')
 
-  // utils and variables
-  const endUserIp = useUserIp()
+  // variables
   const END_OF_ORDER_DELAY = 2000
 
   const handleOrder = async () => {
     setLoading(true)
     setUserMessage('BankID startar order, var god vänta')
-
+    const endUserIp = await getUserIp()
+    
     // ================ request = AUTH or SIGN ================== //
     const params = {
       endUserIp,
