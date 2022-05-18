@@ -1,5 +1,5 @@
 import Button from '../Button'
-import bankIdFetch from '../../utils/bankIdFetch'
+import bankIdFetch from '../../api/bankIdFetch'
 import { useState } from 'react'
 
 const Cancel = ({ orderRef = '', setUserMessage = '' }) => {

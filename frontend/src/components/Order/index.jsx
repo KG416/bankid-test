@@ -13,34 +13,30 @@ import ChevronLeft from '../../components/icons/ChevronLeft'
 
 // utils
 import { launchNativeApp } from '../../utils/launchNativeApp'
-import getUserIp from '../../utils/getUserIp'
-import bankIdFetch from '../../utils/bankIdFetch'
-import bankIdCollect from '../../utils/bankIdCollect'
+import getUserIp from '../../api/getUserIp'
+import bankIdFetch from '../../api/bankIdFetch'
+import bankIdCollect from '../../api/bankIdCollect'
 import isMobile from '../../utils/isMobile'
 
-function Order ({
-  method = '',
-  headerText = '',
-  userVisibleData = '',
-}) {
+// variables
+const END_OF_ORDER_DELAY = 2000
+
+function Order({ method = '', headerText = '', userVisibleData = '' }) {
   // state
   const [orderRef, setOrderRef] = useState('')
   const [loading, setLoading] = useState(false)
   const [step, setStep] = useState(1)
   const [userMessage, setUserMessage] = useState('')
 
-  // variables
-  const END_OF_ORDER_DELAY = 2000
-
   const handleOrder = async () => {
     setLoading(true)
     setUserMessage('BankID startar order, var god vänta')
     const endUserIp = await getUserIp()
-    
+
     // ================ request = AUTH or SIGN ================== //
     const params = {
       endUserIp,
-      ...(userVisibleData && { userVisibleData }),
+      ...(userVisibleData && { userVisibleData })
       // ...(personalNumber && { personalNumber }),
       // ...(requirement ? requirement : {}),
       // ...(userNonVisibleData && userNonVisibleData),
@@ -52,7 +48,7 @@ function Order ({
     setOrderRef(data.orderRef)
     launchNativeApp({
       isMobile: isMobile(),
-      autoStartToken: data.autoStartToken,
+      autoStartToken: data.autoStartToken
     })
 
     // ================ request = COLLECT ================== //
@@ -79,7 +75,7 @@ function Order ({
 
   return (
     <div className={styles.wrapper}>
-      <LinkWithIcon to='/' variant='secondary' icon={<ChevronLeft />} />
+      <LinkWithIcon to="/" variant="secondary" icon={<ChevronLeft />} />
 
       {step === 1 && (
         <Step1
@@ -88,16 +84,9 @@ function Order ({
           setUserMessage={setUserMessage}
         />
       )}
-      {step === 2 && (
-        <Step2
-          onClickOpenOnSameDevice={handleOrder}
-          userMessage={userMessage}
-        />
-      )}
+      {step === 2 && <Step2 onClickOpenOnSameDevice={handleOrder} userMessage={userMessage} />}
 
-      {loading && (
-        <Cancel setUserMessage={setUserMessage} orderRef={orderRef} />
-      )}
+      {loading && <Cancel setUserMessage={setUserMessage} orderRef={orderRef} />}
     </div>
   )
 }
