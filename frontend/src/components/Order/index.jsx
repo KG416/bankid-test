@@ -62,7 +62,6 @@ function Order ({
     if (!result.ok) {
       setLoading(false)
       setUserMessage('Åtgärden avbruten')
-      console.log('bankIdCollect failed')
       setTimeout(() => setStep(1), END_OF_ORDER_DELAY)
       return
     }

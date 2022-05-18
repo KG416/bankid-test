@@ -2,8 +2,8 @@ import bankIdFetch from "./bankIdFetch"
 import hintCodeToUserMessage from "../utils/hintCodeToUserMessage"
 
 const bankIdCollect = async (orderRef = '', setUserMessage = {}) => {
-    if(!orderRef) return { ok: false }
-    console.log(`bankIdCollect started with orderRef ${orderRef}`)
+    if (!orderRef) return { ok: false } // TODO: <- what good does this guy do?
+    console.log(`Started order with orderRef ${orderRef}`)
 
     // eslint-disable-next-line no-constant-condition
     while (true) {
