@@ -1,5 +1,3 @@
-import styles from '../ButtonAndLink.module.scss'
-
 const Button = ({
   as: Component = 'button',
   children,
@@ -12,7 +10,7 @@ const Button = ({
     <Component
       disabled={disabled}
       onClick={onClickButton}
-      className={`${styles.buttonOrLink} ${styles[variant]}`}>
+      className={`mainButton ${variant}`}>
       {children}
     </Component>
   )

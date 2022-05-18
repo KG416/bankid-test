@@ -1,6 +1,5 @@
 // style
 import styles from './Step1.module.scss'
-import btnStyles from '../ButtonAndLink.module.scss'
 
 // components
 import Button from '../Button'
@@ -11,8 +10,8 @@ const Step1 = ({ onBankIDClick, headerText }) => {
     <div className={styles.wrapper}>
       <h2>{headerText}</h2>
       <Button variant="primary" onClickButton={onBankIDClick}>
-        <span className={btnStyles.btnSvgWrapper}>
-          <BankIdLogo color="white" />
+        <span className="btnSvgWrapper">
+          <BankIdLogo color="white" size="small" />
         </span>
         BankID
       </Button>

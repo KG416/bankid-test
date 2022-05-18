@@ -7,7 +7,7 @@ import { useState } from 'react'
 // components
 import Step1 from '../Step1'
 import Step2 from '../Step2'
-import ButtonOrLinkIcon from '../../components/ButtonOrLinkIcon'
+import LinkWithIcon from '../../components/LinkWithIcon'
 import Cancel from '../Cancel'
 import ChevronLeft from '../../components/icons/ChevronLeft'
 
@@ -79,7 +79,7 @@ function Order ({
 
   return (
     <div className={styles.wrapper}>
-      <ButtonOrLinkIcon to='/' variant='secondary' icon={<ChevronLeft />} />
+      <LinkWithIcon to='/' variant='secondary' icon={<ChevronLeft />} />
 
       {step === 1 && (
         <Step1

@@ -1,9 +1,9 @@
 import styles from './BankIdLogo.module.scss'
 
-const BankIdLogo = ({ color }) => {
-  // eslint-disable-next-line no-undef
+const BankIdLogo = ({ color, size = 'big' }) => {
   const logo = require(`../../assets/BankID_logo_${color}.svg`)?.default
-  return <img className={styles.logo} src={logo} alt='BankID logo' />
+
+  return <img className={`${styles.logo} ${styles[size]}`} src={logo} alt="BankID logo" />
 }
 
 export default BankIdLogo

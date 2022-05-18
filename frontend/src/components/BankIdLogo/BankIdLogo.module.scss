@@ -1,4 +1,11 @@
 .logo {
   height: 100%;
-  width: 100%;
+
+  &.small {
+    width: unset;
+  }
+
+  &.big {
+    width: 100%;
+  }
 }

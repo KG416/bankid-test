@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import styles from '../ButtonAndLink.module.scss'
 
 const Link = ({
   to,
@@ -7,7 +6,7 @@ const Link = ({
   variant = 'primary',
 }) => {
   return (
-    <NavLink className={`${styles.buttonOrLink} ${styles[variant]}`} to={to}>
+    <NavLink className={`mainLink ${variant}`} to={to}>
       {children}
     </NavLink>
   )

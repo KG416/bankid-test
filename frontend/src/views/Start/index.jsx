@@ -8,12 +8,12 @@ import BankIdLogo from '../../components/BankIdLogo'
 const Start = () => {
   return (
     <div className={styles.wrapper}>
-      <div>
-        <BankIdLogo color='black' />
+      <div className={styles.logoWrapper}>
+        <BankIdLogo color="black" size="big" />
       </div>
 
-      <Link to='/auth'>Identifiering</Link>
-      <Link to='sign'>Signering</Link>
+      <Link to="/auth">Identifiering</Link>
+      <Link to="sign">Signering</Link>
     </div>
   )
 }

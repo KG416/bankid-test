@@ -14,15 +14,12 @@ const Step2 = ({ onClickOpenOnSameDevice, userMessage }) => {
   return (
     <div className={styles.wrapper}>
       <div>
-        <BankIdLogo color='black' />
+        <BankIdLogo color="black" size="big" />
       </div>
 
       <p className={styles.userMessage}>{userMessage && userMessage}</p>
 
-      <div
-        className={styles.info}
-        style={orderStarted ? { display: 'none' } : {}}
-      >
+      <div className={styles.info} style={orderStarted ? { display: 'none' } : {}}>
         <ul>
           <li>Starta BankID-appen på din mobil eller surfplatta</li>
           <li>Tryck på QR-kodknappen i appen</li>

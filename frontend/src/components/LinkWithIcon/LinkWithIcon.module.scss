@@ -1,0 +1,11 @@
+@import '../../style/variables.scss';
+
+.linkWithIcon {
+  height: 60px;
+  width: 60px;
+  align-self: flex-start;
+
+  svg:hover {
+    fill: $darkGray;
+  }
+}

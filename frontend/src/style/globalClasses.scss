@@ -1,6 +1,8 @@
-@import '../global.scss';
+@import './variables.scss';
 
-.buttonOrLink {
+// buttons & links
+.mainButton,
+.mainLink {
   border-radius: $borderRadiusSmall;
 
   height: 65px;
@@ -46,16 +48,7 @@
   }
 }
 
-.buttonOrLinkIcon {
-  height: 60px;
-  width: 60px;
-  align-self: flex-start;
-
-  svg:hover {
-    fill: $darkGray;
-  }
-}
-
+// wrapper for svg inside buttons
 .btnSvgWrapper {
   height: 100%;
 }
