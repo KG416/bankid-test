@@ -4,7 +4,8 @@
   "description": "A BankID test app",
   "main": "httpServer.js",
   "scripts": {
-    "start": "nodemon httpServer.js"
+    "server": "nodemon httpServer.js",
+    "client": "npm start --prefix frontend"
   },
   "author": "kg",
   "license": "ISC",
