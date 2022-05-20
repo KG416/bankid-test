@@ -1,7 +1,7 @@
 {
-  "name": "bankid-https",
+  "name": "bankid-test-app-https",
   "version": "1.0.0",
-  "description": "requests to bankid api",
+  "description": "https requests to bankid api",
   "main": "index.js",
   "author": "kg",
   "license": "ISC",

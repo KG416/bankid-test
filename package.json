@@ -1,5 +1,5 @@
 {
-  "name": "bankid-karl",
+  "name": "bankid-test-app",
   "version": "1.0.0",
   "description": "A BankID test app",
   "main": "httpServer.js",
