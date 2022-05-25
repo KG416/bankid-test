@@ -19,10 +19,9 @@ import bankIdCollect from '../../api/bankIdCollect'
 import isMobile from '../../utils/isMobile'
 
 // variables
-const END_OF_ORDER_DELAY = 2000
+const END_OF_ORDER_DELAY = 5000
 
-function Order({ method = '', headerText = '', userVisibleData = '' }) {
-  // state
+function Order({ method, headerText, userVisibleData }) {
   const [orderRef, setOrderRef] = useState('')
   const [loading, setLoading] = useState(false)
   const [step, setStep] = useState(1)

@@ -2,7 +2,7 @@ import Button from '../Button'
 import bankIdFetch from '../../api/bankIdFetch'
 import { useState } from 'react'
 
-const Cancel = ({ orderRef = '', setUserMessage = '' }) => {
+const Cancel = ({ orderRef, setUserMessage }) => {
   const [disabled, setDisabled] = useState(false)
 
   const handleCancel = async () => {
