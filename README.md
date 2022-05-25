@@ -22,8 +22,8 @@ This app is a template for how an implementation of BankID can be done. BankID i
 
 In a terminal, run the following commands from the project root folder
 
-1. `npm run server` | starts node server
-2. `npm run client` | starts react dev server
+1. `npm run server` starts node server
+2. `npm run client` starts react dev server
 3. App is now running on port 3000
 
 ## Features
@@ -35,7 +35,7 @@ The app allows you to try an example of the following BankID services
 
 ## The app flow in short
 
-**This is what happens when the user authenticates or signs with the app**
+This is what happens when the user authenticates or signs with the app
 
 1. FE sends a request to HTTP
 2. HTTP runs a function that sends an HTTPS request to the API
