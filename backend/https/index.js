@@ -34,8 +34,6 @@ const axios = axiosLib.create({
 })
 
 async function call(method, params) {
-    console.log('method:', method, 'params:', params)
-
     const [error, response] = await to(axios.post(`${config.bankdIdUrl}/${method}`, params))
     
     if (error) return { error }
