@@ -44,7 +44,7 @@ This is what happens when the user authenticates or signs with the app
 
 1. FE sends a request to HTTP
 2. HTTP runs a function that sends an HTTPS request to the API
-3. Response is sent back to FE via BE (API -> BE -> FE) unless some of the response should only be saved in BE
+3. Response is sent back to FE via the back end (API -> HTTPS -> HTTP -> FE) unless some of the response should only be saved in the back end.
 
 ## The app flow in more detail
 
