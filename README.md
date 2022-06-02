@@ -20,9 +20,9 @@ This app is a template for how an implementation of BankID can be done. BankID i
 
 ## How to use
 
-1. Add a .env file in the project root folder with the following info
+1. Add a .env file in the project root folder with the following text
 
-`NODE_ENV = development`
+`NODE_ENV = development` <br>
 `PORT = 3001` (or whatever port you prefer)
 
 2. In a terminal, run the following commands from the project root folder
