@@ -1,11 +1,11 @@
 // style
-import styles from './Step1.module.scss'
+import styles from './OrderStep1.module.scss'
 
 // components
 import Button from '../Button'
 import BankIdLogo from '../BankIdLogo'
 
-const Step1 = ({ onBankIDClick, headerText }) => {
+const OrderStep1 = ({ onBankIDClick, headerText }) => {
   return (
     <div className={styles.wrapper}>
       <h2>{headerText}</h2>
@@ -25,4 +25,4 @@ const Step1 = ({ onBankIDClick, headerText }) => {
   )
 }
 
-export default Step1
+export default OrderStep1

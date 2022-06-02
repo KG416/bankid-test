@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device
 
-const isMobile = () => {
+export default function isMobile() {
     let isMobile = false //initiate as false
 
     // device detection
@@ -11,5 +11,3 @@ const isMobile = () => {
 
     return isMobile
 }
-
-export default isMobile

@@ -1,7 +1,8 @@
+// utils
 import bankIdFetch from "./bankIdFetch"
 import hintCodeToUserMessage from "../utils/hintCodeToUserMessage"
 
-const bankIdCollect = async (orderRef, setUserMessage) => {
+export default async function bankIdCollect(orderRef, setUserMessage) {
     // eslint-disable-next-line no-constant-condition
     while (true) {
         try {
@@ -18,5 +19,3 @@ const bankIdCollect = async (orderRef, setUserMessage) => {
         await new Promise(resolve => setTimeout(resolve, 2000))
     }
 }
-
-export default bankIdCollect

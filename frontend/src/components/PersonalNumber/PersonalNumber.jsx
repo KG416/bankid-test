@@ -1,6 +1,6 @@
 // if used, personalNumber must be 12 characters
 
-function PersonalNumber({ personalNumber, setPersonalNumber }) {
+const PersonalNumber = ({ personalNumber, setPersonalNumber }) => {
   return (
     <div>
       <label>

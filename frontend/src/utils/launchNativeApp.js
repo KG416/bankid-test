@@ -1,8 +1,8 @@
-export const launchNativeApp = ({
+export default function launchNativeApp({
     isMobile = false,
     autoStartToken,
     redirect = null,
-}) => {
+}) {
     // if redirect, the redirect URL should use HTTPS
 
     let currentUrl

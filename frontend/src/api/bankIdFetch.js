@@ -1,4 +1,4 @@
-const bankIdFetch = async (method, params) => {
+export default async function bankIdFetch(method, params) {
     try {
         const res = await fetch(`/api/bankid/${method}`, {
             method: 'POST',
@@ -16,5 +16,3 @@ const bankIdFetch = async (method, params) => {
         console.log('bankIdFetch: ', err)
     }
 }
-
-export default bankIdFetch

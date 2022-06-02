@@ -1,9 +1,13 @@
-// style
+// libs
 import { useState } from 'react'
-import BankIdLogo from '../BankIdLogo'
-import styles from './Step2.module.scss'
 
-const Step2 = ({ onClickOpenOnSameDevice, userMessage }) => {
+// components
+import BankIdLogo from '../BankIdLogo'
+
+// style
+import styles from './OrderStep2.module.scss'
+
+const OrderStep2 = ({ onClickOpenOnSameDevice, userMessage }) => {
   const [orderStarted, setOrderStarted] = useState(false)
 
   const handleOpenOnSameDevice = () => {
@@ -36,4 +40,4 @@ const Step2 = ({ onClickOpenOnSameDevice, userMessage }) => {
   )
 }
 
-export default Step2
+export default OrderStep2
