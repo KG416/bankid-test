@@ -20,11 +20,16 @@ This app is a template for how an implementation of BankID can be done. BankID i
 
 ## How to use
 
-In a terminal, run the following commands from the project root folder
+1. Add a .env file in the project root folder with the following info
 
-1. `npm run server` - starts node server
-2. `npm run client` - starts react dev server
-3. App is now running on port 3000
+`NODE_ENV = development`
+`PORT = 3001` (or whatever port you prefer)
+
+2. In a terminal, run the following commands from the project root folder
+
+- `npm run server` - starts node server
+- `npm run client` - starts react dev server
+- App is now running on port 3000
 
 ## Features
 
