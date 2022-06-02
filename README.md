@@ -1,6 +1,6 @@
 # BankID Test App
 
-_Please use [BankID's official documentation](https://www.bankid.com/en/utvecklare/guider/teknisk-integrationsguide) as your main source of information for implementing BankID in an application. This project and this documentation was made in **may 2022** and changes may have occured since._
+_Please use [BankID's official documentation](https://www.bankid.com/en/utvecklare/guider/teknisk-integrationsguide) as your main source of information for implementing BankID in an application. This BankID Test App and the documentation below was created in **May 2022** and changes may have occured since._
 
 ## What is this? (TLDR)
 
