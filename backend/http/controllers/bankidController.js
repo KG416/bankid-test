@@ -37,8 +37,12 @@ const collectController = async (req, res) => {
         if (response.status === 'complete') {
             const completionData = response?.completionData
             console.log(
-                'Important info to RP: "keep this completion data for future references/compliance/audit."',
-                completionData?.ocspResponse, completionData?.signature, completionData?.user
+                'Important info to RP = keep "ocspResponse", "signature" and "user" for future references/compliance/audit',
+                {
+                    ocspResponse: completionData?.ocspResponse.substring(0, 8) + '...', 
+                    signature: completionData?.signature.substring(0, 8) + '...', 
+                    user: completionData?.user
+                }
             )
             return res.json({ status: response.status })
         }
